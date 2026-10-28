@@ -1,7 +1,7 @@
 # La Granja del Pollo · Sitio en HTML5
 
 Tarea de ISW-311 Tecnologías de Internet I, Unidad I.
-Sitio de tres páginas sobre La Granja del Pollo, un negocio de venta de huevos por cartón en Moca, Espaillat.
+Sitio de tres páginas sobre La Granja del Pollo, un negocio de venta de huevos por cartón en Higüey, La Altagracia.
 
 - **Sitio publicado:** https://alex-robles26.github.io/ISW311-Sitio-HTML5-Manaury-Robles/
 - **Autor:** Manaury Robles · Matrícula 2023-3786
