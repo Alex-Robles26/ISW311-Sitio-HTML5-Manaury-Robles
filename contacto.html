@@ -9,6 +9,7 @@
 <body>
   <header>
     <h1>Contacto y pedidos</h1>
+    <p>La Granja del Pollo · Moca, Espaillat</p>
     <!-- Menú igualito en las tres páginas -->
     <nav>
       <ul>
@@ -20,6 +21,101 @@
   </header>
 
   <main>
+    <!-- Todas las formas de comunicarse con la granja -->
+    <section id="medios">
+      <h2>Escríbenos o llámanos</h2>
+      <p><a href="#pedido">Ir directo al formulario de pedido</a></p>
+      <ul>
+        <li>Correo: <a href="mailto:pedidos@lagranjadelpollo.com.do">pedidos@lagranjadelpollo.com.do</a></li>
+        <li>Teléfono y WhatsApp: <a href="tel:+18095550147">809-555-0147</a></li>
+        <li><a href="lista-precios.txt" download>Descargar la lista de precios</a></li>
+        <li>Información sobre producción avícola: <a href="https://agricultura.gob.do" target="_blank" rel="noopener">Ministerio de Agricultura</a></li>
+      </ul>
+
+      <h3>Dónde estamos</h3>
+      <address>
+        La Granja del Pollo<br>
+        Carretera Moca–Salcedo, km 3, Las Lagunas<br>
+        Moca, Espaillat, República Dominicana
+      </address>
+      <p>Abrimos de lunes a sábado, de 7:00 a. m. a 5:00 p. m.</p>
+    </section>
+
+    <!-- El formulario del pedido, cada campo con su label -->
+    <section id="pedido">
+      <h2>Haz tu pedido</h2>
+      <form>
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60">
+          </div>
+          <div>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="809-555-0147">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu pedido</legend>
+          <div>
+            <label for="producto">Producto</label>
+            <select id="producto" name="producto" required>
+              <optgroup label="Huevos blancos">
+                <option value="blanco-mediano">Blanco mediano</option>
+                <option value="blanco-grande">Blanco grande</option>
+                <option value="blanco-extra">Blanco extra grande</option>
+              </optgroup>
+              <optgroup label="Huevos marrones">
+                <option value="marron-grande">Marrón grande</option>
+                <option value="marron-extra">Marrón extra grande</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <label for="cantidad">Cantidad de cartones</label>
+            <input type="number" id="cantidad" name="cantidad" required min="1" max="50" value="1">
+          </div>
+          <div>
+            <label for="fecha">Fecha de entrega</label>
+            <input type="date" id="fecha" name="fecha" required min="2026-11-02">
+          </div>
+          <div>
+            <label for="hora">Hora de entrega</label>
+            <input type="time" id="hora" name="hora" min="08:00" max="17:00">
+          </div>
+
+          <!-- Los radios van en su propio fieldset porque son un solo grupo -->
+          <fieldset>
+            <legend>Forma de pago</legend>
+            <input type="radio" id="efectivo" name="pago" value="efectivo" checked>
+            <label for="efectivo">Efectivo al recibir</label>
+            <input type="radio" id="transferencia" name="pago" value="transferencia">
+            <label for="transferencia">Transferencia</label>
+          </fieldset>
+
+          <div>
+            <label for="orden">Orden de compra (solo colmados y negocios)</label>
+            <input type="file" id="orden" name="orden" accept=".pdf,.jpg,.png">
+          </div>
+          <div>
+            <label for="notas">Notas para el repartidor</label>
+            <textarea id="notas" name="notas" rows="4" maxlength="300"></textarea>
+          </div>
+          <div>
+            <input type="checkbox" id="whatsapp" name="whatsapp" checked>
+            <label for="whatsapp">Quiero que me confirmen el pedido por WhatsApp</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar pedido</button>
+      </form>
+    </section>
   </main>
 
   <footer>
